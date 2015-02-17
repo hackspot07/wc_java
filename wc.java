@@ -16,4 +16,8 @@ public class WC{
 				count++;
 		return count;
 	}
+
+	public int wordCount(){
+		return str.split("\\s+").length;
+	}
 }
