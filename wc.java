@@ -1,8 +1,8 @@
 public class WC{
 	private String str;
-	private int l,w,c;
-	public WC(String content){
-		str = content;
+
+	public WC(String str){
+		this.str = str;
 	} 
 
 	public int charCount(){
@@ -18,6 +18,11 @@ public class WC{
 	}
 
 	public int wordCount(){
-		return str.split("\\s+").length;
+		String[] strArray =  str.split("\\s+");
+		int count = strArray.length;
+		for(int i=0; i< strArray.length; i++)
+			if(strArray[i].equals(""))
+				count--;
+		return count;
 	}
 }
