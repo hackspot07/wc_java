@@ -6,13 +6,14 @@ public class WC{
 	} 
 
 	public int charCount(){
-		c = str.length();
-		return c;
+		return str.length();
 	}
 	
 	public int lineCount(){
-		String[] counter = str.split("\r\n");
-		int count = counter.length-1;
+		int count = 0;
+		for(int i=0; i< str.length(); i++)
+			if(str.substring(i,i+1).equals("\n"))
+				count++;
 		return count;
 	}
 }
