@@ -1,6 +1,6 @@
 public class WC{
 	private String str;
-
+	
 	public WC(String str){
 		this.str = str;
 	} 
@@ -24,6 +24,12 @@ public class WC{
 			if(strArray[i].equals(""))
 				count--;
 		return count;
+	}
+
+	public static int[] l_w_c_Count(String str){
+		WC wcObject = new WC(str);
+		int result[] = {wcObject.lineCount(),wcObject.wordCount(),wcObject.charCount()};
+		return result;
 	}
 }
 
