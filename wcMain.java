@@ -6,6 +6,6 @@ class wcMain{
 		String content = readObj.readContent();
 		int result[] = WC.l_w_c_Count(content);
 		
-		System.out.println(result[0]+"  "+result[1]+"  "+result[2]+ " "+args[0]);
+		System.out.println(" 	"+result[0]+"	"+result[1]+"	"+result[2]+ " "+args[0]);
 	} 
 }
