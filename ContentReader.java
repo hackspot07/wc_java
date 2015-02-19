@@ -1,5 +1,6 @@
 import java.io.*;
 
+
 public class ContentReader{
 	private String fileName;
 
@@ -11,7 +12,7 @@ public class ContentReader{
 		try{ 
 			File file = new File(fileName);
 			BufferedReader br = new BufferedReader(new FileReader(file));
-			
+
 			int length = (int)file.length(); 
 	        char[] cbuf = new char[length];
          	br.read(cbuf, 0, length);
