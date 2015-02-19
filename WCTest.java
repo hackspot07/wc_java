@@ -46,4 +46,25 @@ public class WCTest{
 		int words = WCObject.wordCount();
 		assertEquals(words,3);
 	}
+	@Test
+	public void WCGiveWordCount0(){
+		String str = "\n\n\n\n\n";
+		WC WCObject =  new WC(str);
+		int words = WCObject.wordCount();
+		assertEquals(words,0);
+	}
+	@Test
+	public void WCGiveLineCount5(){
+		String str = "\n\n\n\n\n";
+		WC WCObject =  new WC(str);
+		int lines = WCObject.lineCount();
+		assertEquals(lines,5);
+	}
+	@Test
+	public void WCGivecharCount5(){
+		String str = "\n\n\n\n\n";
+		WC WCObject =  new WC(str);
+		int lines = WCObject.charCount();
+		assertEquals(lines,5);
+	}
 }

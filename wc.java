@@ -1,6 +1,6 @@
 public class WC{
 	private String str;
-	
+		
 	public WC(String str){
 		this.str = str;
 	} 
