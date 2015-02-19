@@ -26,9 +26,9 @@ public class WC{
 		return count;
 	}
 
-	public static int[] l_w_c_Count(String str){
-		WC wcObject = new WC(str);
-		int result[] = {wcObject.lineCount(),wcObject.wordCount(),wcObject.charCount()};
+	public int[] l_w_c_Count(){
+		WC w = new WC(str);
+		int result[] = {w.lineCount(),w.wordCount(),w.charCount()};
 		return result;
 	}
 }
