@@ -17,4 +17,11 @@ public class ArgumentSeperatorTest{
 		boolean bool = argObj.isValidOption("-m");
 		assertEquals(bool,false);
 	} 
+	@Test
+	public void isValidOptionsWillReturnFalse(){
+		String args[] = {"-m"};
+		ArgumentSeperator argObj = new ArgumentSeperator(args);	
+		boolean bool = argObj.isValidOption("-m");
+		assertEquals(bool,false);
+	} 
 }
