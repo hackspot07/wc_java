@@ -9,7 +9,7 @@ public class Operator{
 	}
 
 	public void wcWithoutFlag(){
-		for(int i=0; files[i]!= null; i++){ 
+		for(int i=0; i< files.length; i++){ 
 			int result[] = new int[3];
 			ContentReader readObj = new ContentReader(files[i]);
 			WC wcObject = new WC(readObj.readContent());
