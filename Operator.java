@@ -8,14 +8,36 @@ public class Operator{
 		this.flags = flags;
 	}
 
-	public void operateBasedOnFlag(){
-		int result[] = new int[3];
-		for(String file:files){ 
-			ContentReader readObj = new ContentReader(file);
+	public void wcWithoutFlag(){
+		for(int i=0; files[i]!= null; i++){ 
+			int result[] = new int[3];
+			ContentReader readObj = new ContentReader(files[i]);
 			WC wcObject = new WC(readObj.readContent());
 			result = wcObject.l_w_c_Count();
 
-			System.out.println(" "+result[0]+"	"+result[1]+"	"+result[2]+ " "+file);
+			System.out.println(" "+result[0]+"	"+result[1]+"	"+result[2]+ " "+files[i]);
 		}
 	}
+
+	public void wcWithFlags(){
+		for(int j=0; files[j]!=null; j++){
+			int result[]  = new int[3];
+			ContentReader readObj = new ContentReader(files[j]);
+			WC wcObject = new WC(readObj.readContent());
+			for(int i=0;flags[i]!=null;i++){
+				result[i] = checkFlag(readObj.readContent(),flags[i]);
+			}
+		System.out.println(" "+result[0]+"	"+result[1]+"	"+result[2]+ " "+files[j]);
+		}
+	}
+
+	public int checkFlag(String content,String flag){
+		WC w = new WC(content);
+		switch(flag){
+			case "-l": return w.lineCount();
+			case "-w": return w.wordCount();
+			case "-c": return w.charCount();
+			default : return -1;
+		}
+	} 
 }
