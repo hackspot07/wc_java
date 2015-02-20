@@ -14,17 +14,19 @@ public class ArgumentSeperator{
 
 	public String[] getFlags(){
 		String flags[] = new String[args.length];
-		for(int i=0;i<args.length;i++)
-			if(isValidOption(args[i]))
-				flags[flags.length-1] = args[i];
+		int index = 0;
+		for(String option:args)
+			if(isValidOption(option))
+				flags[index++] = option;
 		return flags;
 	}
 
 	public String[] getFiles(){
 		String files[] = new String[args.length];
-		for(int i=0;i<args.length;i++)
-			if(!isValidOption(args[i]))
-				files[files.length-1] = args[i];
+		int index = 0;
+		for(String option:args)
+			if(!isValidOption(option))
+				files[index++] = option;
 		return files;
 	}	
 }
