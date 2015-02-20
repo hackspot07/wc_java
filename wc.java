@@ -20,8 +20,8 @@ public class WC{
 	public int wordCount(){
 		String[] strArray =  str.split("\\s+");
 		int count = strArray.length;
-		for(int i=0; i< strArray.length; i++)
-			if(strArray[i].equals(""))
+		for(String subStr:strArray)
+			if(subStr.equals(""))
 				count--;
 		return count;
 	}
